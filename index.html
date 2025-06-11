@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>アプリでYouTubeを開くサンプル</title>
+</head>
+<body>
+  <h1>アプリでYouTubeを開くサンプル</h1>
+  <button id="openApp">YouTubeアプリで開く</button>
+  <script>
+    document.getElementById('openApp').addEventListener('click', function() {
+      window.location.href = 'vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY';
+    });
+  </script>
+  <p>ボタンを押すとYouTubeアプリ（インストール済みの場合）が起動します。</p>
+</body>
+</html>
