@@ -5,9 +5,8 @@
   <title>自動でYouTubeアプリを開くサンプル</title>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      window.location.href = 'vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY';
+      window.location.href = 'https://youtu.be/armN-JjF-KY?feature=shared';
       setTimeout(() => {
-        // アプリが起動しなかった場合のフォールバック（例: YouTube Web）
         window.location.replace('https://ja.wikipedia.org/');
       }, 500);
     });
@@ -15,6 +14,6 @@
 </head>
 <body>
   <h1>自動でYouTubeアプリを開くサンプル</h1>
-  <p>自動的にYouTubeアプリが起動します。<br>起動しない場合はWeb版YouTubeに遷移します。</p>
+  <p>自動的にYouTubeアプリが起動します。</p>
 </body>
 </html>
