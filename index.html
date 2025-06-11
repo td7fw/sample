@@ -2,16 +2,19 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>アプリでYouTubeを開くサンプル</title>
-</head>
-<body>
-  <h1>アプリでYouTubeを開くサンプル</h1>
-  <button id="openApp">YouTubeアプリで開く</button>
+  <title>自動でYouTubeアプリを開くサンプル</title>
   <script>
-    document.getElementById('openApp').addEventListener('click', function() {
+    document.addEventListener('DOMContentLoaded', () => {
       window.location.href = 'vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY';
+      setTimeout(() => {
+        // アプリが起動しなかった場合のフォールバック（例: YouTube Web）
+        window.location.replace('https://ja.wikipedia.org/');
+      }, 500);
     });
   </script>
-  <p>ボタンを押すとYouTubeアプリ（インストール済みの場合）が起動します。</p>
+</head>
+<body>
+  <h1>自動でYouTubeアプリを開くサンプル</h1>
+  <p>自動的にYouTubeアプリが起動します。<br>起動しない場合はWeb版YouTubeに遷移します。</p>
 </body>
 </html>
