@@ -7,7 +7,6 @@
     document.addEventListener('DOMContentLoaded', () => {
       window.location.href = 'vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY';
       setTimeout(() => {
-        // アプリが起動しなかった場合はとりあえずウィキペディアに飛ばしてみる
         window.location.replace('https://ja.wikipedia.org/');
       }, 500);
     });
@@ -15,6 +14,15 @@
 </head>
 <body>
   <h1>自動でYouTubeアプリを開くサンプル</h1>
-  <p>自動的にYouTubeアプリが起動します。<br>起動しない場合はWeb版YouTubeに遷移します。</p>
+  <p>自動的にYouTubeアプリが起動します。<br>起動しない場合はウィキペディアに遷移します。</p>
+  <button id="openApp">YouTubeアプリで開く</button>
+  <script>
+    document.getElementById('openApp').addEventListener('click', function() {
+      window.location.href = 'vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY';
+      setTimeout(() => {
+        window.location.replace('https://ja.wikipedia.org/');
+      }, 500);
+    });
+  </script>
 </body>
 </html>
