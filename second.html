@@ -5,8 +5,8 @@
   <title>自動でYouTubeアプリを開くサンプル</title>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-    //   window.location.href = 'vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY';
-      window.location.replace('https://youtu.be/armN-JjF-KY?feature=shared');
+      window.location.href = 'https://youtu.be/armN-JjF-KY?feature=shared';
+    //   window.location.replace('vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY');
       setTimeout(() => {
         window.location.replace('https://ja.wikipedia.org/');
       }, 500);
@@ -15,7 +15,7 @@
 </head>
 <body>
   <h1>自動でYouTubeアプリを開くサンプル</h1>
-  <p>自動的にYouTubeアプリが起動します。<br>起動しない場合はウィキペディアに遷移します。</p>
+  <p>自動的にYouTubeアプリが起動します。<br>起動しない場合はウィキペディアに遷移します。２</p>
   <button id="openApp">YouTubeアプリで開く</button>
   <script>
     document.getElementById('openApp').addEventListener('click', function() {
