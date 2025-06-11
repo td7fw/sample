@@ -2,28 +2,11 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>自動でYouTubeアプリを開くサンプル</title>
-  <!-- <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      window.location.href = 'vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY';
-      setTimeout(() => {
-        window.location.replace('https://ja.wikipedia.org/');
-      }, 500);
-    });
-  </script> -->
+  <title>自動でYouTubeアプリを開くサンプル（リンクページ）</title>
 </head>
 <body>
   <h1>自動でYouTubeアプリを開くサンプル</h1>
-  <p>自動的にYouTubeアプリが起動します。<br>起動しない場合はウィキペディアに遷移します。２</p>
-  <button id="openApp">YouTubeアプリで開く</button>
-  <script>
-    document.getElementById('openApp').addEventListener('click', function() {
-    //   window.location.href = 'vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY';
-      window.location.replace('vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY');
-      setTimeout(() => {
-        window.location.replace('https://ja.wikipedia.org/');
-      }, 500);
-    });
-  </script>
+  <p>下記リンクから自動遷移＋ボタン遷移のサンプルページ（second.html）へ移動できます。</p>
+  <a href="second.html">second.html へ</a>
 </body>
 </html>
