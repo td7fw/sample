@@ -6,22 +6,29 @@
 <!--   <script>
     //   window.location.href = 'https://youtu.be/armN-JjF-KY?feature=shared';
     window.location.replace('vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY');
-    setTimeout(() => {
-      window.location.replace('https://apps.apple.com/app/id544007664');
-    }, 500);
+    window.location.replace('https://apps.apple.com/app/id544007664');
+    // setTimeout(() => {
+    //   window.location.replace('https://ja.wikipedia.org/');
+    // }, 3000);
   </script> -->
 </head>
 <body>
   <h1>自動でYouTubeアプリを開くサンプル</h1>
-  <p>自動的にYouTubeアプリが起動します。<br>起動しない場合はウィキペディアに遷移します。２</p>
-  <button id="openApp">YouTubeアプリで開く</button>
+  <p>自動的にYouTubeアプリが起動します。<br>起動しない場合はウィキペディアに遷移します。</p>
+  <button id="openAppVnd">YouTubeアプリで開く（vnd.youtube）</button>
+  <button id="openAppHttps">YouTubeアプリで開く（https）</button>
   <script>
-    document.getElementById('openApp').addEventListener('click', function() {
-    //   window.location.href = 'vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY';
+    document.getElementById('openAppVnd').addEventListener('click', function() {
       window.location.replace('vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY');
       setTimeout(() => {
         window.location.replace('https://apps.apple.com/app/id544007664');
-      }, 500);
+      }, 3000);
+    });
+    document.getElementById('openAppHttps').addEventListener('click', function() {
+      window.location.replace('https://youtu.be/armN-JjF-KY?feature=shared');
+      setTimeout(() => {
+        window.location.replace('https://apps.apple.com/app/id544007664');
+      }, 3000);
     });
   </script>
 </body>
