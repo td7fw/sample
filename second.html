@@ -4,27 +4,17 @@
   <meta charset="UTF-8">
   <title>自動でYouTubeアプリを開くサンプル</title>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      window.location.href = 'https://youtu.be/armN-JjF-KY?feature=shared';
-    //   window.location.replace('vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY');
+    const params = new URLSearchParams(window.location.search);
+    const videoId = params.get('v');
+    if (videoId) {
+      window.location.replace(`vnd.youtube://m.youtube.com/watch?v=${videoId}`);
       setTimeout(() => {
-        window.location.replace('https://ja.wikipedia.org/');
-      }, 500);
-    });
+        window.location.replace('https://apps.apple.com/app/id544007664');
+      }, 2000);
+    }
   </script>
 </head>
 <body>
-  <h1>自動でYouTubeアプリを開くサンプル</h1>
-  <p>自動的にYouTubeアプリが起動します。<br>起動しない場合はウィキペディアに遷移します。２</p>
-  <button id="openApp">YouTubeアプリで開く</button>
-  <script>
-    document.getElementById('openApp').addEventListener('click', function() {
-    //   window.location.href = 'vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY';
-      window.location.replace('vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY');
-      setTimeout(() => {
-        window.location.replace('https://ja.wikipedia.org/');
-      }, 500);
-    });
-  </script>
+  <p>自動的にYouTubeアプリが起動します。</p>
 </body>
 </html>
