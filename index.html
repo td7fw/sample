@@ -2,16 +2,20 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>first.html → second.html ルーティングサンプル</title>
+  <title>自動でYouTubeアプリを開くサンプル</title>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // クエリパラメータを付与してsecond.htmlにリダイレクト
-      const videoId = 'armN-JjF-KY';
-      window.location.href = `second.html?v=${encodeURIComponent(videoId)}`;
-    });
+    const params = new URLSearchParams(window.location.search);
+    const videoId = params.get('v');
+    if (videoId) {
+      // window.location.replace(`vnd.youtube://m.youtube.com/watch?v=${videoId}`);
+      window.location.replace('vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY');
+      // setTimeout(() => {
+      //   window.location.replace('https://apps.apple.com/app/id544007664');
+      // }, 2000);
+    }
   </script>
 </head>
 <body>
-  <p>second.htmlにリダイレクト中...</p>
+  <p>自動的にYouTubeアプリが起動します。</p>
 </body>
 </html>
