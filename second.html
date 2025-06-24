@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <title>自動でYouTubeアプリを開くサンプル</title>
   <script>
+    // クエリパラメータから動画ID取得
     const params = new URLSearchParams(window.location.search);
     const videoId = params.get('v');
-    if (videoId) {
-      // window.location.replace(`vnd.youtube://m.youtube.com/watch?v=${videoId}`);
-      window.location.replace(`https://www.youtube.com/watch?v=${videoId}`);
-      // setTimeout(() => {
-      //   window.location.replace('https://apps.apple.com/app/id544007664');
-      // }, 2000);
-    }
+    const vndUrl = `vnd.youtube://m.youtube.com/watch?v=${videoId}`;
+    // bodyに表示
+    window.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('vnd-url').textContent = vndUrl;
+    });
   </script>
 </head>
 <body>
   <p>自動的にYouTubeアプリが起動します。</p>
+  <p>遷移先: <span id="vnd-url"></span></p>
 </body>
 </html>
