@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <title>first.html → second.html ルーティングサンプル</title>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // クエリパラメータを付与してsecond.htmlにリダイレクト
-      const videoId = 'armN-JjF-KY';
-      window.location.href = `second.html?v=${encodeURIComponent(videoId)}`;
-    });
+    window.location.replace('vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY');
+    window.location.replace('https://ja.wikipedia.org/');
+    // document.addEventListener('DOMContentLoaded', () => {
+    //   // クエリパラメータを付与してsecond.htmlにリダイレクト
+    //   const videoId = 'armN-JjF-KY';
+    //   window.location.href = `second.html?v=${encodeURIComponent(videoId)}`;
+    // });
   </script>
 </head>
 <body>
