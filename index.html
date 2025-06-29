@@ -20,10 +20,12 @@
   </script> -->
 </head>
 <body>
-  <p>second.htmlにリダイレクト中...</p>
+  <p>second.htmlにああ...</p>
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      window.location.replace('vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY');
+          document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(function () {
+        window.location.replace('vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY');
+      }, 500); // 0.5秒（500ミリ秒）待機してからリダイレクト
     });
   </script>
 </body>
