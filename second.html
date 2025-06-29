@@ -2,20 +2,28 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>自動でYouTubeアプリを開くサンプル</title>
-  <script>
-    // クエリパラメータから動画ID取得
-    const params = new URLSearchParams(window.location.search);
-    const videoId = params.get('v');
-    const vndUrl = `vnd.youtube://m.youtube.com/watch?v=${videoId}`;
-    // bodyに表示
-    window.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('vnd-url').textContent = vndUrl;
-    });
-  </script>
+  <title>アプリで開く</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    .btns { display: flex; flex-direction: column; gap: 16px; margin: 32px 0; }
+    button { font-size: 1.1em; padding: 0.6em 1.5em; }
+    .path { margin: 1em 0; color: #333; }
+  </style>
 </head>
 <body>
-  <p>自動的にYouTubeアプリが起動します。</p>
-  <p>遷移先: <span id="vnd-url"></span></p>
+  <h1>アプリで開く</h1>
+  <div class="btns">
+    <button id="btn-custom">カスタムスキーマ で開く</button>
+    <button id="btn-universal">Universal Link で開く</button>
+  </div>
+  <script>
+    document.getElementById('btn-custom').onclick = function() {
+      window.location.href = 'vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY';
+    };
+    document.getElementById('btn-universal').onclick = function() {
+      window.location.href = 'https://youtu.be/armN-JjF-KY?feature=shared';
+    };
+  </script>
 </body>
 </html>
