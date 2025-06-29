@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>first.html → second.html ルーティングサンプル</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>
+<!--   <script>
     // window.location.replace('vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY');
           window.location.href = 'vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY';
     // window.location.replace('https://youtu.be/armN-JjF-KY?feature=shared');
@@ -17,9 +17,14 @@
     //   const videoId = 'armN-JjF-KY';
     //   window.location.href = `second.html?v=${encodeURIComponent(videoId)}`;
     // });
-  </script>
+  </script> -->
 </head>
 <body>
   <p>second.htmlにリダイレクト中...</p>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      window.location.replace('vnd.youtube://m.youtube.com/watch?v=armN-JjF-KY');
+    });
+  </script>
 </body>
 </html>
